@@ -1,0 +1,13 @@
+<h1 class="mt-5">DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <dbz-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)"></dbz-list> <!-- [characterList] is an input property of dbz-list component -->
+  </div>
+
+  <div class="col">
+    <!-- add-character -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character> <!-- (onNewCharacter) is an output property of dbz-add-character component -->
+  </div>
+</div>
